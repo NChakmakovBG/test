@@ -19,7 +19,7 @@
             <button type="button" @click="tab = 'seo'" :class="tab === 'seo' ? 'bg-indigo-600 text-white' : 'text-slate-600 hover:bg-slate-100'" class="px-4 py-2 rounded-lg text-sm font-medium transition-colors">SEO</button>
         </div>
 
-        @foreach($settings as $group => $items)
+        @foreach($settingsGrouped as $group => $items)
         <div x-show="tab === '{{ $group }}'" class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
             <h2 class="text-lg font-semibold text-slate-800 mb-6 capitalize">{{ $group }} Settings</h2>
             <div class="space-y-5">

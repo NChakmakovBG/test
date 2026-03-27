@@ -38,11 +38,9 @@ class SettingsController extends Controller
 
     public function index()
     {
-        $settings = SiteSetting::all()->groupBy('group');
+        $settingsGrouped = SiteSetting::all()->groupBy('group');
 
-        $groups = $this->groups;
-
-        return view('admin.settings.index', compact('settings', 'groups'));
+        return view('admin.settings.index', compact('settingsGrouped'));
     }
 
     public function update(Request $request)

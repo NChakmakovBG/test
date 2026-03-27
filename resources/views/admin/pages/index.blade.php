@@ -97,11 +97,7 @@
         </table>
     </div>
 
-    @if(isset($pages) && $pages->hasPages())
-        <div class="px-6 py-4 border-t border-slate-100">
-            {{ $pages->links() }}
-        </div>
-    @endif
+    {{-- Pagination placeholder: switch controller to paginate() to enable --}}
 </div>
 
 @endsection
